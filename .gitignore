@@ -1,0 +1,5 @@
+output_dev
+data
+vendor
+composer.lock
+sculpin.lock
