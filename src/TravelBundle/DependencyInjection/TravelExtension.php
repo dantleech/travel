@@ -11,5 +11,10 @@ class TravelExtension extends Extension
     {
         $def = $container->register('import_command', 'DTL\Travel\TravelBundle\Command\ImportCommand');
         $def->addTag('console.command');
+
+        $def = $container->register('twig_extension', 'DTL\Travel\TravelBundle\TwigExtension');
+        $def->addArgument(__DIR__ . '/../../../source/assets/media');
+        $def->addArgument('/assets/media');
+        $def->addTag('twig.extension');
     }
 }

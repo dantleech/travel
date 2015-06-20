@@ -1,0 +1,9 @@
+sculpin_content_types:
+    journies:
+        type: path
+        path: _journies
+        singular_name: journey
+        layout: journey
+        enabled: true
+        taxonomies:
+            - tags

@@ -1,0 +1,17 @@
+---
+layout: default
+use: [journies]
+---
+
+{% for journey in data.journies if journey.hasJournal %}
+    <div>
+        <h3>{{ journey.title }}</h3>
+        <div class="date">{{ journey.date|date('Y-m-d H:i:s') }}</div>
+        <div>
+            {{ journey.blocks.content|raw }}
+        </div>
+        {% for media_url in medias_for_date(journey.date) %}
+        <a href="{{ media_url }}"><img height="100" width="100" src="{{ media_url }}" /></a>
+        {% endfor %}
+    </div>
+{% endfor %}
